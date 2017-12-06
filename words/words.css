@@ -1,0 +1,54 @@
+
+#game-container{
+  margin-top: 100px;
+  background-color: #c2c2f0;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.words-container {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-left: 150px;
+}
+
+.word-container {
+  opacity: 1;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: inline-flex;
+  padding-right: 2px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.col-md-3{
+  margin-top: 20px;
+}
+
+.letters {
+  text-align: center;
+  color:white;
+  margin: 2px 0px 2px 2px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #0066cc;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.letters-base-container {
+
+}
+
+.letters-container {
+  text-align:center;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.letters-drag {
+  background-color: #ff6666;
+}
