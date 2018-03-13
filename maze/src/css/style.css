@@ -1,0 +1,115 @@
+.game-col{
+  width: 20px;
+  height: 20px;
+  margin-left: 1px;
+  display: inline-table;
+  position: relative;
+}
+
+.game-body{
+  height: 100%;
+  margin: 0 auto;
+}
+
+#name{
+  width: 80px;
+}
+
+.header-name{
+  margin-right: 20px;
+}
+
+.game-container{
+  background-image: url('../images/background_1.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40%;
+  margin: 0 auto;
+}
+
+
+.header{
+  margin: 0 auto;
+  width: 100%;
+  height: 30px;
+  background-color: #cccccc;
+}
+
+
+.container {
+  position: relative;
+  margin: auto;
+}
+
+.player-select {
+  position: absolute;
+  background-size: contain;
+  width: 68px;
+  height: 59px;
+  top: -39px;
+  left: -12px;
+}
+
+.startTab {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: green;
+}
+
+.overTab {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: red;
+  display: none;
+}
+
+.start-button{
+  margin-left: 50px;
+  margin-top: 100px;
+  width: 100px;
+  height: 40px;
+}
+
+.top-score-list{
+  background-color: #FFFFFF;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.restart-button{
+  margin-left: 50px;
+  margin-top: 10px;
+  width: 100px;
+  height: 40px;
+}
+
+.controll-buttons{
+  width: 150px;
+  height: 100px;
+}
+
+.controll-left{
+  padding-left: 5px;
+}
+
+.controll-up{
+  margin-left: 35px;
+  margin-right: 25px;
+  width: 50px;
+}
+
+.score-container{
+  margin-left: 50px;
+  margin-top: 50px;
+}
