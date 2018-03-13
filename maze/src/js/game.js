@@ -442,10 +442,10 @@ class Player {
 class Game {
   constructor() {
     this.gameStatus = 0;
-    this.timeoutTime = 800;
+    this.timeoutTime = 600;
     this.gameLevel = 1;
     this.playerName = 'anonim';
-    this.moveiesToLvUp = 5;
+    this.moveiesToLvUp = 10;
     this.levelUpDifficulty = 30;
     this.moovies = 0;
     this.scores = {};
@@ -524,6 +524,8 @@ class Game {
     this.map.clearMap();
     this.map.emptyRoute();
     this.player.direction = 0;
+    this.gameLevel = 1;
+    this.changeHeader();
     this.createTopList();
     this.map.showForm(this.map.settings.map.classes.over);
   };
@@ -546,10 +548,13 @@ class Game {
   }
 
   setScores() {
-    this.scores[this.playerName] = this.gameLevel;
+    if(this.scores.hasOwnProperty(this.playerName) && this.scores[this.playerName] < this.gameLevel) {
+      this.scores[this.playerName] = this.gameLevel;
+    }
     var name = this.playerName;
     var data = {};
     data[name] = this.gameLevel;
+
     this.score.setNewScores(data);
     this.sort();
   }
@@ -578,12 +583,12 @@ class Game {
   checkLastScore() {
     var name = $('#' + this.map.settings.map.ids.name).val();
 
-    if(name.length > 0) {
+    if(name.length > 0 && name.length < 6) {
       this.playerName = name;
     }
 
     if(this.scores.hasOwnProperty(this.playerName)) {
-      this.gameLevel = this.scores[this.playerName];
+      //this.gameLevel = this.scores[this.playerName];
     }
     else{
       this.scores[this.playerName] = this.gameLevel;

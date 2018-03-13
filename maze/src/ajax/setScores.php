@@ -1,12 +1,19 @@
 <?php
 
 if(isset($_POST['rez']) && checkToken($_POST['token'])) {
-
   $score = file_get_contents("../store/all_scores.json");
   $score = json_decode($score, true);
   $new_score = json_decode($_POST['rez']);
 
   foreach($new_score as $name =>  $sc) {
+    if(strlen($name) > 6) {
+      $name = 'anonim';
+    }
+
+    if(isset($score[$name]) && $score[$name] > $sc) {
+      break;
+    }
+
     $score[$name] = $sc;
   }
 
@@ -16,7 +23,7 @@ if(isset($_POST['rez']) && checkToken($_POST['token'])) {
 function checkToken($token) {
   $time = time();
 
-  if(($time - decodeToken($token)) < 1 ) {
+  if(($time - decodeToken($token)) < 10 && ($time - decodeToken($token)) >= 0 ) {
     return true;
   }
 
@@ -46,5 +53,5 @@ function decodeToken($token) {
       $key = '';
     }
   }
-  return $new_token;
+  return (int) $new_token;
 }

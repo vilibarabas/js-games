@@ -1,7 +1,7 @@
 .game-col{
   width: 20px;
   height: 20px;
-  margin-left: 1px;
+  margin-left: 2px;
   display: inline-table;
   position: relative;
 }
