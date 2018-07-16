@@ -1,0 +1,68 @@
+.map-row {
+  //background-color: red;
+  display: table;
+}
+
+.map-coll {
+  width: 10px;
+  height: 10px;
+  //border: 1px solid black;
+  //background-color: blue;
+  display: table-cell;
+}
+
+.flea-container {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/flea.gif');
+  background-size: 100%;
+}
+
+.map-row {
+  display: table;
+}
+
+.map-coll {
+  width: 10px;
+  height: 10px;
+
+  display: table-cell;
+}
+
+.game-container {
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.game-header {
+  background-color: #AAAAAA;
+}
+.wall-element{
+
+}
+
+.play-ball-player{
+  background-color: red;
+}
+
+
+.play-ball-ball{
+  border-radius: 10px;
+  background-color: blue;
+}
+
+.game-start{
+  background-color: green;
+  width: 200px;
+  height: 100px;
+  //display: none;
+  position: fixed;
+  top: 50px;
+  left: 300px;
+}
+
+.button{
+  position: absolute;
+  left: 25%;
+  top:25%;
+}
