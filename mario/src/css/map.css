@@ -1,0 +1,58 @@
+.game-container {
+  background-image: url("../images/background.png");
+  width: auto;
+}
+
+.map-row {
+  display: table;
+  height: 40px;
+}
+
+.map-coll {
+  display: table-cell;
+  width: 40px;
+  position: relative;
+  /*border: 1px solid black;*/
+}
+
+
+.floor{
+  background-image: url("../images/floor.jpg");
+}
+
+.heaven{
+  background-color: #3399ff;
+}
+
+.wall{
+  background-image: url("../images/wall.jpg");
+  background-size: 100%;
+  border: 1px solid black;
+}
+
+.gold{
+  background-image: url("../images/gold.jpg");
+  background-size: 100%;
+  border: 1px solid black;
+}
+
+.empty_gold {
+  background-image: url("../images/empty_gold.jpg");
+  background-size: 100%;
+  border: 1px solid black;
+}
+
+.gold_anim {
+  background-image: url("../images/gold_anim.png");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.player {
+  z-index: +100;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+}

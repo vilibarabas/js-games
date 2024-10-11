@@ -1,0 +1,26 @@
+
+.map-row {
+  display: table;
+}
+
+.map-coll {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: table-cell;
+}
+
+.game-container {
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.game-header {
+  background-color: #AAAAAA;
+}
+
+.element-text{
+  font-size: 64px;
+  margin-left: 28px;
+}
+
