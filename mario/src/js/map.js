@@ -38,12 +38,30 @@ class Map {
     if(map_number > this.settings.map.maps_count) {
       self.current_map = map_number = 1;
     }
+    console.log(map_number);
+    let data = $.getJSON( "src/maps/map_" + map_number + ".json", function() {
+      
+    })
+    .fail(function(error) {
+      console.log( error);
+    }).done(function( data ) {
+     
+      self.createMap(data, body);
 
-    $.ajax({
-    url: "src/maps/map_" + map_number + ".php",
-    }).done(function(data) {
-      self.createMap(JSON.parse(data), body);
     });
+    
+    
+    
+
+    // $.ajax({
+    // url: "src/maps/map_" + map_number + ".json",
+    // }).done(function(data) {
+    //   console.log(data);
+    //   self.createMap(JSON.parse(data), body);
+    // }).fail(function(error) {
+    //   console.log(111);
+    //   console.log('Error:', error); // Outputs: Something bad happened.
+    // })
   }
 
   createMap(data, body) {

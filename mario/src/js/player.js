@@ -6,7 +6,7 @@ class Player {
     this.keypress = 0;
     this.moveAction = 0;
     this.activeJumpAnimation = 0;
-    this.main_src = 'http://localhost/2019/jsGames/mario/';
+    this.main_src = '/js-games/mario/';
     this.settings = settings;
     this.setInitialPositions();
     this.attacheEvents();
